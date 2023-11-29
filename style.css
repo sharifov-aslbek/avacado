@@ -596,9 +596,13 @@
       justify-content: center;
       background: 0;
     }
+
+    .line {
+      width: 780px;
+    }
   }
   
-  @media (max-width:600px) {
+  @media (max-width:640px) {
     .container {
       max-width: 605px;
       width: 100%;
@@ -622,5 +626,9 @@
   
      .footer .container .burger {
       display: block;
+    }
+
+    .line {
+      width: 500px;
     }
   }
