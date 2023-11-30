@@ -140,7 +140,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    width: 450px;
+    max-width: 450px;
     position: relative;
   }
   
@@ -464,11 +464,14 @@
   
   /* Media */
   @media (max-width:1300px) {
+    .hero .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;  
+    }
     .hero .container .text-content {
       width: 500px;
-    }
-    .hero .container .image-block {
-      display: none;
     }
   }
   @media (max-width:1250px) {
@@ -548,11 +551,7 @@
     .footer .container .company {
       width: 200px;
     }
-  
-    .footer .container {}
-  
-  }
-  
+
   @media (max-width:1040px) {
     .header .container .burger {
       display: none;
@@ -600,9 +599,18 @@
     .line {
       width: 780px;
     }
+
+    .footer .container .socials,
+    .footer .container .news , .footer .container .company {
+      display: none;
+    }
+
+    .footer .container .burger {
+      display: block;
+    }
   }
   
-  @media (max-width:640px) {
+  @media (max-width:700px) {
     .container {
       max-width: 605px;
       width: 100%;
@@ -618,17 +626,69 @@
       justify-content: center;
   
     }
-  
-    .footer .container .socials,
-    .footer .container .news , .footer .container .company {
-      display: none;
-    }
-  
-     .footer .container .burger {
-      display: block;
-    }
 
     .line {
       width: 500px;
     }
+  }
+
+  @media (max-width:650px) {
+    .header .container {
+      display: flex;
+      justify-content: center;
+      gap: 130px;
+    }
+    .hero .container .text-content {
+      width: 400px;
+    }
+
+    .hero .container .text-content .title {
+      width: 300px;
+      font-size: 65px;
+      line-height: 50px;
+    }
+
+    .lemon .container .text-content {
+      width: 400px;
+      margin: 0auto;
+    }
+
+    .lemon .container .text-content img {
+      display: none;
+    }
+
+    .lemon .container .text-content .subtitle {
+      width: 350px;
+      margin: 0 auto;
+    }
+
+    .deliver .container .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .deliver .container .wrapper .right {
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+
+    .email .container .right {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .email .container .right p {
+      width: 300px;
+    }
+
+    .email .container .right form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
   }
